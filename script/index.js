@@ -46,7 +46,10 @@ function createPage() {
     class: "task-input",
   });
 
-  // Form button
+  // Form buttons
+  const buttonArea = document.createElement("div");
+  buttonArea.classList.add("btn-group-div");
+
   const addButton = document.createElement("button");
   addButton.classList.add("add-btn");
   addButton.onclick = () => {
@@ -68,10 +71,12 @@ function createPage() {
   resetButton.textContent = "delete all";
   resetButton.onclick = () => handleReset();
 
+  buttonArea.append(addButton, resetButton);
+
   inputArea.append(titleInput, descriptionInput);
   listDiv.append(todoList);
   body.append(container);
-  taskForm.append(resetButton, inputArea, addButton);
+  taskForm.append(inputArea, buttonArea);
   container.append(taskForm, listDiv);
 }
 

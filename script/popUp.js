@@ -5,7 +5,6 @@ export const popUp = (params) => {
   // Params destructure
   const { arr, arrName, task } = params;
   const popUp = document.createElement("div");
-  // popUp.classList.add("pop-up");
   helper.setAttributes(popUp, { class: "container pop-up" });
 
   const popUpContainer = document.createElement("div");
