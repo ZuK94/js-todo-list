@@ -1,7 +1,6 @@
 import task from "./task.js";
 import list from "./list.js";
 import helper from "./helper.js";
-import { popUp } from "./popUp.js";
 
 const body = document.body;
 
@@ -49,6 +48,7 @@ function createPage() {
 
   // Form button
   const addButton = document.createElement("button");
+  addButton.classList.add("add-btn");
   addButton.onclick = () => {
     try {
       handleCreate("tasks", tasks, titleInput.value, descriptionInput.value);
@@ -64,6 +64,7 @@ function createPage() {
   addButton.textContent = "add Task";
 
   const resetButton = document.createElement("button");
+  resetButton.classList.add("reset-btn");
   resetButton.textContent = "delete all";
   resetButton.onclick = () => handleReset();
 

@@ -5,13 +5,14 @@ export const popUp = (params) => {
   // Params destructure
   const { arr, arrName, task } = params;
   const popUp = document.createElement("div");
-  popUp.classList.add("pop-up");
+  // popUp.classList.add("pop-up");
+  helper.setAttributes(popUp, { class: "container pop-up" });
 
   const popUpContainer = document.createElement("div");
   popUpContainer.classList.add("pop-up-container");
 
   const inputArea = document.createElement("form");
-  inputArea.classList.add("input-area");
+  helper.setAttributes(inputArea, { class: "input-area pop" });
 
   const titleInput = document.createElement("input");
   helper.setAttributes(titleInput, {
@@ -32,6 +33,7 @@ export const popUp = (params) => {
   inputArea.append(titleInput, descriptionInput);
 
   const btnArea = document.createElement("div");
+  btnArea.classList.add("btn-area");
   const closeBtn = document.createElement("button");
   const submitBtn = document.createElement("button");
 

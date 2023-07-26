@@ -24,33 +24,41 @@ body {
   align-items: center;
   justify-content: center;
 
+  button {
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
   .form-div {
     padding: 10px 15px;
     min-width: 85%;
     text-align: center;
     display: flex;
     justify-content: space-around;
-
-    button {
-      max-height: 30px;
+  }
+  button {
+    height: 30px;
+    border-radius: 15px;
+    background-color: $salad;
+    border: 1px solid $green;
+  }
+  .input-area {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    max-width: 20rem;
+    .task-input {
+      margin: 5px 0;
+      height: 32px;
+      border: 1px solid gold;
+      border-radius: 5px;
     }
-
-    .input-area {
-      display: flex;
-      flex-direction: column;
-      min-width: 50%;
-      max-width: 20rem;
-      .task-input {
-        margin: 5px 0;
-        height: 32px;
-        border: 1px solid gold;
-        border-radius: 5px;
-      }
-      .task-input:focus {
-        outline: 1.5px solid gold;
-      }
+    .task-input:focus {
+      outline: 1.5px solid gold;
     }
   }
+
   .list-div {
     margin: 2em 0px;
     display: block;
@@ -72,17 +80,13 @@ body {
       background-color: $yellow;
       display: flex;
       list-style: none;
-      // border: 0.5px solid grey;
       border-radius: 10px;
       padding: 5px;
       margin-bottom: 0.5em;
 
       .task-btn {
-        padding: 0 10px;
-        cursor: pointer;
         border: none;
         background-color: #ffffff00;
-        font-size: 16px;
       }
       .task-bullet {
         max-width: 15%;
@@ -144,7 +148,40 @@ body {
     width: 450px;
     height: 150px;
     border-radius: 15px;
-
+    justify-content: space-evenly;
     background-color: $yellow;
+
+    .btn-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .form-div {
+    margin: auto;
+    flex-direction: column;
+    button {
+      margin: 0.2em auto;
+      width: 50%;
+    }
+    .reset-btn {
+      order: 3;
+    }
+  }
+  .list-div {
+    font-size: 12px;
+    margin: 1em 0px !important;
+    display: block;
+    background-color: $green;
+    padding: 0.25em !important;
+    border: 0 solid;
+    border-radius: 15px;
+    width: 90vw !important;
+  }
+  .pop-up-container {
+    width: 100% !important;
   }
 }

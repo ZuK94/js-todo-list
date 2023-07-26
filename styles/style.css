@@ -20,6 +20,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+.container button {
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
 .container .form-div {
   padding: 10px 15px;
   min-width: 85%;
@@ -27,22 +32,25 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.container .form-div button {
-  max-height: 30px;
+.container button {
+  height: 30px;
+  border-radius: 15px;
+  background-color: #e2f6ca;
+  border: 1px solid #9be8d8;
 }
-.container .form-div .input-area {
+.container .input-area {
   display: flex;
   flex-direction: column;
   min-width: 50%;
   max-width: 20rem;
 }
-.container .form-div .input-area .task-input {
+.container .input-area .task-input {
   margin: 5px 0;
   height: 32px;
   border: 1px solid gold;
   border-radius: 5px;
 }
-.container .form-div .input-area .task-input:focus {
+.container .input-area .task-input:focus {
   outline: 1.5px solid gold;
 }
 .container .list-div {
@@ -69,11 +77,8 @@ body {
   margin-bottom: 0.5em;
 }
 .container .list-div .task-item .task-btn {
-  padding: 0 10px;
-  cursor: pointer;
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  font-size: 16px;
 }
 .container .list-div .task-item .task-bullet {
   max-width: 15%;
@@ -129,5 +134,38 @@ body {
   width: 450px;
   height: 150px;
   border-radius: 15px;
+  justify-content: space-evenly;
   background-color: #f8fdcf;
+}
+.pop-up .pop-up-container .btn-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 425px) {
+  .form-div {
+    margin: auto;
+    flex-direction: column;
+  }
+  .form-div button {
+    margin: 0.2em auto;
+    width: 50%;
+  }
+  .form-div .reset-btn {
+    order: 3;
+  }
+  .list-div {
+    font-size: 12px;
+    margin: 1em 0px !important;
+    display: block;
+    background-color: #9be8d8;
+    padding: 0.25em !important;
+    border: 0 solid;
+    border-radius: 15px;
+    width: 90vw !important;
+  }
+  .pop-up-container {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
